@@ -19,8 +19,8 @@ Por otro lado, en mi tiempo navegando en las redes, pricipalmente reddit y sus s
 Por otro lado, en mi tiempo navegando en las redes, pricipalmente reddit y sus subreddits (sub grupos dentro de la red organizado por temas) de programacion, me encuentro con este post de Michael Lynch." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://isagues.github.io/posts/fabricando-la-pagina/" />
-<meta property="article:published_time" content="2020-02-02T22:09:08-03:00" />
-<meta property="article:modified_time" content="2020-02-02T22:09:08-03:00" />
+<meta property="article:published_time" content="2020-02-03T22:09:08-03:00" />
+<meta property="article:modified_time" content="2020-02-03T22:09:08-03:00" />
 
 
     
@@ -101,13 +101,13 @@ Por otro lado, en mi tiempo navegando en las redes, pricipalmente reddit y sus s
           <div class="date">
             <span class="posted-on">
               <i class="fas fa-calendar"></i>
-              <time datetime='2020-02-02T22:09:08-03:00'>
-                February 2, 2020
+              <time datetime='2020-02-03T22:09:08-03:00'>
+                February 3, 2020
               </time>
             </span>
             <span class="reading-time">
               <i class="fas fa-clock"></i>
-              3 minutos de lectura.
+              5 minutos de lectura.
             </span>
           </div>
           
@@ -119,16 +119,21 @@ Por otro lado, en mi tiempo navegando en las redes, pricipalmente reddit y sus s
         
         <h2 id="primer-paso-el-por-qué">Primer Paso: el por qué</h2>
 <p>La idea de hacer un blog/pagina personal es el resultado de dos factores mas que nada. Primero es epoca de vacaciones y, estando en la playa, sin mucho que hacer surgen ideas de todo tipo. Ademas, siempre suena prometodor hacer una pagina web propia.</p>
-<p>Por otro lado, en mi tiempo navegando en las redes, pricipalmente <a href="https://www.reddit.com/">reddit</a> y sus subreddits (sub grupos dentro de la red organizado por temas) de programacion, me encuentro con este <a href="https://mtlynch.io/solo-developer-year-2/">post de Michael Lynch</a>. Fue muy interesante ver su experiencia como desarrolador independinte pero lo que mas destaco es su pagina en la cual, cuenta tanto sus experiencias e ideas respecto a lo laboral, pero tambien, tiene un espacio para comentar un libro que leyo. Asique, si nada mejor que hacer de mis dias, decidi construir mi propia pagina.</p>
+<p>Por otro lado, en mi tiempo navegando en las redes, pricipalmente reddit y sus subreddits (sub grupos dentro de la red organizado por temas) de programacion, me encuentro con este <a href="https://mtlynch.io/solo-developer-year-2/">post de Michael Lynch</a>. Fue muy interesante ver su experiencia como desarrolador independinte pero lo que mas destaco es su pagina en la cual, cuenta tanto sus experiencias e ideas respecto a lo laboral, pero tambien, tiene un espacio para comentar un libro que leyo. Asique, si nada mejor que hacer de mis dias, decidi construir mi propia pagina.</p>
 <h2 id="segundo-paso-encontrar-un-camino-para-empezar">Segundo Paso: encontrar un camino para empezar</h2>
 <p>Salvando un proyecto de la secundaria de hacer una <a href="http://gameofthrones.atwebpages.com/index.html">paginan web</a>, mi conocimiento de diseño web es practicamente nulo. Esto no me podia frenar a la hora de crear la pagina por lo tanto, me puse a investigar que tecnologias se usaban ahora. Mas que nada me interesaba saber que frameworks habia. Me parecia una manera practica de meterme en el tema sin tener que volver a revisar a fondo los conceptos basicos de HTML y CSS.</p>
 <p>Como venia del blog que ya mencione, me habia quedado en la cabeza el nombre Vue.js. Es un framework de javascript que recomendaba el autor por ser conveniente para un unico desarrolador.  Despues de investigar un poco (pero sin mucho impetud) y no econtrar cual era su funcionalidad o que herramientas aportaba, llegue a la conclusion de que habia arrancado por cualquier lado.</p>
+<p><img src="https://isagues.github.io/static/vue.png" alt="Image" title="Vue.js"></p>
 <p>Desdpues de fallar con Vue, me acorde de la existencia de Bootstrap. Habia escuchado hablar un poco y parecia una buena herramienta para arrancar. Busque algunos tutoriales de como arrancar y cuales eran las principales funcionalidades me encontre con otra libreria o framework (cada vez aparecian mas herramientas). Este era w3.css y prometia ser mas liviano y practico que Bootstrap.
 En este momento fue donde dije, por que no mejor revisar la pagina que me habia gustado y ver si habia algun indicio de que herramienta habian usado (en el peor de los casos mandarle un mail al creador). Para mi fortuna, en el fondo de la pagina decia &quot; Powered by Hugo &amp; Coder &ldquo;.</p>
 <p>Esperaba que sea otro framework mas que siga ampliando mi lista de opciones. Pero fue un poco mejor, resulta que es un Generador de Paginas Estaticas (SSG en ingles ). Despues de buscar un poco que era lo que significaba ser un SSG me di cuenta que podria ser la herramienta correcta. Estos programas permiten fabricar una pagina facilmente, en muy poco tiempo y con una buena variedad de temas para aprovechar. Ahora viene la pregunta es, ¿cual es la trampa?. La idea es que, practicamente, no usan scripts. Esto significa que no  son buenas para actulizar contenido constantemente o en tiempo real. Tampoco permiten la interaccion con una base de datos. Esto fue lo que pude captar despues de unas busquedas rapidas.</p>
 <p>En sintesis, decidi ir por el camino del generador de paginas. Lo que me permitio fabricar un intento de pagina, en cuestion de horas. Y para esto decidi continuar con mi plagio al blog de Michaek usando el mismo generador y el mismo tema que me habia gustado</p>
 <h2 id="tercera-parte-la-implementacion">Tercera parte: la implementacion</h2>
-<p>Instale Hugo usando la <a href="https://www.gohugo.io/">pagina oficial</a> y una <a href="https://computingforgeeks.com/how-to-install-hugo-on-ubuntu-debian/">wiki</a> para tener la ultima version en ubuntu.</p>
+<p>Una vez que me decidi con Hugo empece a ver como implementarlo. Ultimamente estoy leyendo manuales y documentacion para saber como usar las herramientas que necesito, no esperaba que llegu este dia. Para utilizar Hugo es necesario instalarlo primero.</p>
+<p>Primero intente usar los pasos de la documentacion oficial, pero estaba orientado para macOS. La version disponible para Ubuntu con apt-get era bastante vieja. Para bajar la version actual use <a href="https://computingforgeeks.com/how-to-install-hugo-on-ubuntu-debian/">esta guia</a>. Como el comando de curl me bajo otra version, la baje a mano (la version extended) y la instale con el comando que explica la guia. Con Hugo funcionando, siguiendo la guia de oficial y los comando de <a href="https://github.com/luizdepra/hugo-coder">Coder</a> (el tema utilizado) tuve, en poco tiempo, mi pagina lista. Pero esta era visible de forma local.</p>
+<p>Al buscar informacion para el hosting encontre <a href="https://pages.github.com/">GitHub Pages</a>. Este servicio me solucionaba dos problemas. Primero y principal, el hospedaje de mi pagina de manera gratuita. Por otro lado, resuelve uno de los inconvenientes de las paginas estaticas, la modificacion (agregado y borrado) de contenido. Lo que aporta el sistema de GitHub es actualizar la pagina desde un repositorio. Por lo tanto, la forma de utilizarlo es la misma que cualquier otro caso de uso de git y la pagina muestra los contenidos depositados en la rama de master.</p>
+<h2 id="cuarta-parte-conclusion">Cuarta parte: conclusion</h2>
+<p>En sintesis, el proceso de hacer la pagina fue bastante simple y llevadero. Al momento de escribir esto, no pude modificar la pagina tanto como me gustaria pero, tampoco le dedique tanto tiempo. Una vez instalado el programa, entendido como funciona y resuleto el problema de donde subir la pagina, creo que es una forma practica de generar paginas. Mientras estas se mantengan dentro de las limitaciones de la plataforma, se puede priorizar el tiempo en publicar el contenido y no perder tanto tiempo en la pagina y todo lo que esta conlleva.</p>
 
       </div>
 
